@@ -3,40 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./js/index.js"></script>
 </head>
 <body>
-    <div id="app">
-        {{ msg }}
-    </div>
-
-    <div id="app-2">
-        <span v-bind:title="msg">
-            Event?
-        </span>
-    </div>
-
-    <div id="app-3">
-        <p v-if="seen">You can see it</p>
-    </div>
-
-    <div id="app-4">
-        <ol>
-            <li v-for="todo in todos">
-                {{ todo.text }}
-            </li>
-        </ol>
-    </div>
-
-    <div id="app-5">
-        <p>{{ msg }}</p>
-        <button v-on:click="reverseMsg">메시지 뒤집기</button>
-    </div>
-
-    <div id="app-6">
-        <p>{{ msg }}</p>
-        <input type="text" v-model="msg">
+    <div id="app" class="container">
+        <h2>Form Check Control</h2>
+        <p>It's check box test</p>
+        <div class="form-check">
+            <label for="" class="form-check-label" for="check">
+                <input type="checkbox" v-model="home" id="check">Home?
+            </label>
+        </div>
+        <img :src="home?a:b">
     </div>
 </body>
 </html>
